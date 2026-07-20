@@ -12,8 +12,8 @@ export const metadata = {
   description: 'Explore and compare the Cella AI model family by Qatrix Infotech. Find the right model for your work, device, and ambitions.',
   keywords: ['Cella AI', 'Qatrix Infotech', 'AI model comparison', 'local AI models', 'AI software India'],
   alternates: { canonical: '/' },
-  openGraph: { title: 'One family. Seven ways to think.', description: 'Meet and compare the Cella AI model family by Qatrix Infotech.', type: 'website', locale: 'en_IN', siteName: 'Qatrix Infotech', images: ['/og.png'] },
-  twitter: { card: 'summary_large_image', title: 'Cella AI Model Atlas', description: 'One family. Seven ways to think.', images: ['/og.png'] },
+  openGraph: { title: 'One family. Seven ways to think.', description: 'Meet and compare the Cella AI model family by Qatrix Infotech.', type: 'website', locale: 'en_IN', siteName: 'Qatrix Infotech' },
+  twitter: { card: 'summary_large_image', title: 'Cella AI Model Atlas', description: 'One family. Seven ways to think.' },
   robots: { index: true, follow: true },
   icons: { icon: '/qatrix-logo.png', shortcut: '/qatrix-logo.png' },
 };
