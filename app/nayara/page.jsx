@@ -3,14 +3,47 @@ import Link from 'next/link';
 import styles from './page.module.scss';
 import FadeContent from '@/components/FadeContent';
 
+const title = 'NAYARA v1.0 Model Specification';
+const description = 'Technical specifications, architecture, and deployment details for the NAYARA v1.0 model by Qatrix Infotech.';
+const url = 'https://qatrix.vercel.app/nayara';
+
 export const metadata = {
-  title: 'NAYARA v1.0 Model Specification',
-  description: 'Technical specifications, architecture, and deployment details for the NAYARA v1.0 model by Qatrix Infotech.',
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url,
+    type: 'website',
+    siteName: 'Qatrix Infotech',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+  }
 };
 
 export default function NayaraSpecPage() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'NAYARA v1.0',
+    applicationCategory: 'ArtificialIntelligence',
+    description: description,
+    operatingSystem: 'Any',
+    softwareVersion: '1.0',
+    requirements: '16 GB RAM; 70.6 GB Peak VRAM for training',
+    author: {
+      '@type': 'Organization',
+      name: 'Qatrix Infotech Pvt. Ltd.',
+      url: 'https://qatrix.vercel.app'
+    }
+  };
+
   return (
     <main className={styles.container}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <FadeContent blur duration={800}>
         <div className={styles.header}>
           <h1>NAYARA <em>v1.0</em></h1>

@@ -54,3 +54,14 @@
   .hero{grid-template-columns:1fr}.heroAside{display:none}.intro,.hardwareSection,.aboutBand,.faqSection{grid-template-columns:1fr;gap:50px}.introStats{margin-top:20px}.modelCard,.card0,.card3,.card6{grid-column:span 6}.faqHeading{position:static}.aboutVisual{min-height:390px}.sectionHeading{align-items:start}.compareDetails>div{grid-template-columns:90px 1fr 1fr}}
 @media(max-width:620px){
   .pointerGlow{display:none}.hero{padding-top:145px;min-height:840px}.heroCopy h1{font-size:64px;line-height:.86}.heroActions{align-items:flex-start;flex-direction:column;gap:18px}.intro,.modelsSection,.compareSection,.hardwareSection,.aboutBand,.faqSection{padding-top:90px;padding-bottom:90px}.intro{display:block}.introStats{grid-template-columns:1fr}.sectionHeading{display:block}.sectionHeading>p{margin-top:25px}.modelCard,.card0,.card3,.card6{grid-column:span 12;min-height:360px}.compareShell{padding:18px;border-radius:24px}.compareSelectors{grid-template-columns:1fr}.compareSelectors button{transform:rotate(90deg);justify-self:center}.compareNames{font-size:30px}.profileRow{grid-template-columns:75px 1fr}.compareDetails>div{grid-template-columns:1fr;gap:8px}.compareDetails span{color:#55d9e8}.pixelCloud{width:250px;height:230px}.faqItem strong{font-size:20px}.ctaTicker{display:none}}
+
+.creditsSection { padding: 80px var(--pad); background: var(--cream); display: flex; justify-content: center; }
+.creditsContainer { max-width: 700px; width: 100%; }
+.creditsCard { display: flex; align-items: center; gap: 30px; padding: 30px; border-radius: 30px; background: rgba(255, 255, 255, 0.7); box-shadow: 0 15px 40px rgba(22, 104, 145, 0.05); border: 1px solid rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+.creditsImage img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 25px rgba(22, 104, 145, 0.15); border: 3px solid white; }
+.creditsInfo h3 { margin: 8px 0; font: 400 32px var(--font-display); letter-spacing: -0.03em; color: var(--ink); }
+.creditsInfo p { margin: 0 0 16px 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.creditsLinks { display: flex; gap: 16px; }
+.creditsLinks a { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--blue); text-decoration: none; transition: transform 0.2s; }
+.creditsLinks a:hover { transform: translateY(-2px); }
+@media (max-width: 620px) { .creditsCard { flex-direction: column; text-align: center; } .creditsLinks { justify-content: center; } }

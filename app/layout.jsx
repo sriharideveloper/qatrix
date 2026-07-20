@@ -7,7 +7,7 @@ const display = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['n
 const body = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', '600'], variable: '--font-body' });
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.qatrixinfotech.com'),
+  metadataBase: new URL('https://qatrix.vercel.app'),
   title: { default: 'Cella AI Model Atlas — Qatrix Infotech', template: '%s — Qatrix Infotech' },
   description: 'Explore and compare the Cella AI model family by Qatrix Infotech. Find the right model for your work, device, and ambitions.',
   keywords: ['Cella AI', 'Qatrix Infotech', 'AI model comparison', 'local AI models', 'AI software India'],

@@ -126,6 +126,25 @@ export default function LandingPage() {
 
       <section id="faq" className={styles.faqSection}><div className={styles.faqHeading}><Eyebrow>Good questions</Eyebrow><h2>Clarity,<br /><em>continued.</em></h2><p>Model guidance and company facts, without the fog.</p></div><FAQ /></section>
 
+      <section className={styles.creditsSection}>
+        <FadeContent className={styles.creditsContainer} blur>
+          <motion.div className={styles.creditsCard} whileHover={{ y: -5, boxShadow: "0 25px 50px rgba(22, 104, 145, 0.12)" }} transition={{ type: "spring", stiffness: 300 }}>
+            <div className={styles.creditsImage}>
+              <img src="/srihari.jpg" alt="Srihari Muralikrishnan" onError={(e) => e.target.src = '/qatrix-logo.png'} />
+            </div>
+            <div className={styles.creditsInfo}>
+              <Eyebrow>Maker & Designer</Eyebrow>
+              <h3>Srihari Muralikrishnan</h3>
+              <p>Designed and built the Cella AI Model Atlas & engineered the NAYARA model.</p>
+              <div className={styles.creditsLinks}>
+                <a href="https://www.linkedin.com/in/sriharithebest/" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={14} /></a>
+                <a href="https://github.com/sriharideveloper/" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={14} /></a>
+              </div>
+            </div>
+          </motion.div>
+        </FadeContent>
+      </section>
+
       <section className={styles.cta}><div className={styles.ctaHalo} /><Eyebrow>Build what matters</Eyebrow><h2>Ready to make AI<br /><em>feel useful?</em></h2><p>Tell Qatrix what you want to build, automate, or grow.</p><motion.a href="mailto:qatrixinfotech@gmail.com" whileHover={{ scale: 1.05, backgroundColor: "var(--blue)" }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>Start a conversation <ArrowUpRight size={18} /></motion.a><div className={styles.ctaTicker}><span>Cella</span><span>Qatrix</span><span>AI with direction</span><span>Built for outcomes</span></div></section>
     </main>
   );

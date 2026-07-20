@@ -9,9 +9,25 @@ export async function generateMetadata({ params }) {
   const details = modelDetails[id];
   if (!details) return { title: 'Model Not Found' };
   
+  const title = `${details.name} ${details.version} Specification`;
+  const description = details.description;
+  const url = `https://qatrix.vercel.app/models/${id}`;
+  
   return {
-    title: `${details.name} ${details.version} Specification`,
-    description: details.description,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+      siteName: 'Qatrix Infotech',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    }
   };
 }
 
@@ -29,8 +45,25 @@ export default async function ModelDetailsPage({ params }) {
     notFound();
   }
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: `${details.name} ${details.version}`,
+    applicationCategory: 'ArtificialIntelligence',
+    description: details.description,
+    operatingSystem: 'Any',
+    requirements: details.localFormat,
+    softwareVersion: details.version,
+    author: {
+      '@type': 'Organization',
+      name: 'Qatrix Infotech Pvt. Ltd.',
+      url: 'https://qatrix.vercel.app'
+    }
+  };
+
   return (
     <main className={styles.container}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <FadeContent blur duration={800}>
         <div className={styles.header}>
           <h1>{details.name} <em>{details.version}</em></h1>
