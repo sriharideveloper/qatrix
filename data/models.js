@@ -11,6 +11,7 @@ export const models = [
     description: "The confident all-rounder for teams that want one dependable default.",
     accent: "#1577ff",
     profile: { Everyday: 5, Creative: 4, Reasoning: 4, Efficiency: 3 },
+    specLink: "/models/nexa",
   },
   {
     id: "nova",
@@ -24,6 +25,7 @@ export const models = [
     description: "A quick, practical companion for the rhythm of everyday work.",
     accent: "#1ab6ff",
     profile: { Everyday: 5, Creative: 3, Reasoning: 3, Efficiency: 4 },
+    specLink: "/models/nova",
   },
   {
     id: "aurora",
@@ -37,6 +39,7 @@ export const models = [
     description: "Built to stretch a spark into language, concepts, and visual direction.",
     accent: "#7467ff",
     profile: { Everyday: 3, Creative: 5, Reasoning: 3, Efficiency: 3 },
+    specLink: "/models/aurora",
   },
   {
     id: "omin",
@@ -50,6 +53,7 @@ export const models = [
     description: "The deep thinker for layered decisions, systems, and technical work.",
     accent: "#0e4fba",
     profile: { Everyday: 3, Creative: 3, Reasoning: 5, Efficiency: 2 },
+    specLink: "/models/omin",
   },
   {
     id: "ovira",
@@ -63,6 +67,7 @@ export const models = [
     description: "Professional clarity for documents, decisions, and structured work.",
     accent: "#17a89b",
     profile: { Everyday: 4, Creative: 2, Reasoning: 4, Efficiency: 3 },
+    specLink: "/models/ovira",
   },
   {
     id: "nano",
@@ -76,6 +81,7 @@ export const models = [
     description: "A compact local assistant that keeps modest hardware moving fast.",
     accent: "#ff9b48",
     profile: { Everyday: 4, Creative: 2, Reasoning: 2, Efficiency: 5 },
+    specLink: "/models/nano",
   },
   {
     id: "aura",
@@ -89,6 +95,7 @@ export const models = [
     description: "Warm, fluid conversation for people-facing experiences.",
     accent: "#ef5da8",
     profile: { Everyday: 5, Creative: 3, Reasoning: 3, Efficiency: 4 },
+    specLink: "/models/aura",
   },
   {
     id: "nayara",

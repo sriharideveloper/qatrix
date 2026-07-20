@@ -10,6 +10,7 @@ import styles from './SiteChrome.module.scss';
 const links = [
   ['Models', '/#models'],
   ['Compare', '/#compare'],
+  ['Technical Guide', '/technical-guide'],
   ['About', '/about'],
   ['FAQ', '/#faq'],
 ];
@@ -49,7 +50,7 @@ export function SiteFooter() {
       <div className={styles.footerTop}>
         <div><Image src="/qatrix-logo.png" alt="Qatrix" width="152" height="46" /><p>AI products, scalable software, and digital growth systems.</p></div>
         <div className={styles.footerLinks}>
-          <div><span>Explore</span><Link href="/#models">Models</Link><Link href="/#compare">Compare</Link><Link href="/about">About</Link></div>
+          <div><span>Explore</span><Link href="/#models">Models</Link><Link href="/#compare">Compare</Link><Link href="/technical-guide">Technical Guide</Link><Link href="/about">About</Link></div>
           <div><span>Legal</span><Link href="/privacy-policy">Privacy</Link><Link href="/terms-and-conditions">Terms</Link></div>
           <div><span>Connect</span><a href="mailto:qatrixinfotech@gmail.com">Email us</a><a href="tel:+917736977650">+91 77369 77650</a></div>
         </div>
