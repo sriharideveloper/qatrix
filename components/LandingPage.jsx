@@ -15,11 +15,22 @@ function Eyebrow({ children }) { return <div className={styles.eyebrow}><span />
 
 function ModelCard({ model, index, onCompare }) {
   return (
-    <motion.article className={`${styles.modelCard} ${styles[`card${index}`]}`} style={{ '--accent': model.accent }} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 260, damping: 20 }}>
+    <motion.article 
+      className={`${styles.modelCard} ${styles[`card${index}`]}`} 
+      style={{ '--accent': model.accent }} 
+      whileHover={{ y: -10, scale: 1.015, boxShadow: "0 25px 60px rgba(22, 104, 145, 0.15)" }} 
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+    >
       <div className={styles.cardTop}><span>0{index + 1}</span><span>{model.load}</span></div>
       <div className={styles.modelGlyph} aria-hidden="true"><span>{model.name.charAt(0)}</span></div>
       <div><p className={styles.modelPosition}>{model.position}</p><h3>{model.name} <em>{model.version}</em></h3><p className={styles.modelDescription}>{model.description}</p></div>
-      <div className={styles.modelMeta}><span><Cpu size={13} />{model.hardware.split(' · ')[0]}</span><button onClick={() => onCompare(model.id)} aria-label={`Compare ${model.name}`}>Compare <ArrowUpRight size={14} /></button></div>
+      <div className={styles.modelMeta}>
+        <span><Cpu size={13} />{model.hardware.split(' · ')[0]}</span>
+        <div style={{ display: 'flex', gap: '8px' }}>
+          {model.specLink && <Link href={model.specLink} style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent)', padding: '8px', textDecoration: 'none' }}>Spec <ArrowUpRight size={14} /></Link>}
+          <button onClick={() => onCompare(model.id)} aria-label={`Compare ${model.name}`}>Compare <ArrowUpRight size={14} /></button>
+        </div>
+      </div>
     </motion.article>
   );
 }
@@ -105,7 +116,7 @@ export default function LandingPage() {
 
       <section className={styles.hardwareSection}>
         <div className={styles.hardwareIntro}><Eyebrow>Hardware guide</Eyebrow><h2>Meet your machine<br /><em>where it is.</em></h2><p>An SSD is strongly recommended. More RAM helps with large prompts; for local AI, GPU memory usually matters most for speed.</p></div>
-        <div className={styles.tiers}>{hardwareTiers.map((tier, index) => <motion.article key={tier.label} whileHover={{ x: 8 }}><span>0{index + 1}</span><div><h3>{tier.label}</h3><p>{tier.spec}</p><small><Check size={13} />{tier.fit}</small></div><Gauge size={20} /></motion.article>)}</div>
+        <div className={styles.tiers}>{hardwareTiers.map((tier, index) => <motion.article key={tier.label} whileHover={{ x: 12, scale: 1.02, backgroundColor: "rgba(22, 136, 232, 0.03)" }} transition={{ type: 'spring', stiffness: 300 }}><span>0{index + 1}</span><div><h3>{tier.label}</h3><p>{tier.spec}</p><small><Check size={13} />{tier.fit}</small></div><Gauge size={20} /></motion.article>)}</div>
       </section>
 
       <section className={styles.aboutBand}>
@@ -115,7 +126,7 @@ export default function LandingPage() {
 
       <section id="faq" className={styles.faqSection}><div className={styles.faqHeading}><Eyebrow>Good questions</Eyebrow><h2>Clarity,<br /><em>continued.</em></h2><p>Model guidance and company facts, without the fog.</p></div><FAQ /></section>
 
-      <section className={styles.cta}><div className={styles.ctaHalo} /><Eyebrow>Build what matters</Eyebrow><h2>Ready to make AI<br /><em>feel useful?</em></h2><p>Tell Qatrix what you want to build, automate, or grow.</p><a href="mailto:qatrixinfotech@gmail.com">Start a conversation <ArrowUpRight size={18} /></a><div className={styles.ctaTicker}><span>Cella</span><span>Qatrix</span><span>AI with direction</span><span>Built for outcomes</span></div></section>
+      <section className={styles.cta}><div className={styles.ctaHalo} /><Eyebrow>Build what matters</Eyebrow><h2>Ready to make AI<br /><em>feel useful?</em></h2><p>Tell Qatrix what you want to build, automate, or grow.</p><motion.a href="mailto:qatrixinfotech@gmail.com" whileHover={{ scale: 1.05, backgroundColor: "var(--blue)" }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>Start a conversation <ArrowUpRight size={18} /></motion.a><div className={styles.ctaTicker}><span>Cella</span><span>Qatrix</span><span>AI with direction</span><span>Built for outcomes</span></div></section>
     </main>
   );
 }

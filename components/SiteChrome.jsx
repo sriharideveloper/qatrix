@@ -54,7 +54,11 @@ export function SiteFooter() {
           <div><span>Connect</span><a href="mailto:qatrixinfotech@gmail.com">Email us</a><a href="tel:+917736977650">+91 77369 77650</a></div>
         </div>
       </div>
-      <div className={styles.footerBottom}><span>© 2026 Qatrix Infotech Pvt. Ltd.</span><span>India-based · Globally available</span></div>
+      <div className={styles.footerBottom}>
+        <span>© 2026 Qatrix Infotech Pvt. Ltd.</span>
+        <span>India-based · Globally available</span>
+        <span>Website designed & made by Srihari Muralikrishnan</span>
+      </div>
     </footer>
   );
 }

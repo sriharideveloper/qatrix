@@ -90,6 +90,20 @@ export const models = [
     accent: "#ef5da8",
     profile: { Everyday: 5, Creative: 3, Reasoning: 3, Efficiency: 4 },
   },
+  {
+    id: "nayara",
+    name: "NAYARA",
+    version: "1.0",
+    position: "Pretrained base model",
+    bestFor: "Instruction tuning, evaluation, execution-guided generation",
+    hardware: "8 GB RAM laptop · CPU with INT8",
+    load: "Light",
+    strength: "Python-like syntax, functions, and code patterns",
+    description: "A 351M parameter base model. Not yet a reliable coding assistant, but a valid pretrained base.",
+    accent: "#e13463",
+    profile: { Everyday: 2, Creative: 2, Reasoning: 2, Efficiency: 5 },
+    specLink: "/nayara",
+  },
 ];
 
 export const hardwareTiers = [
